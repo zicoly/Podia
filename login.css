@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
+    text-align: left;
+    background-color: #fff;
+}
+
+header {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
+
+.right-nav ul{
+    display: flex;
+}
+
+.main-nav-logo svg {
+    height: 24px;
+    width: auto;
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #d5d7d9;
+    border: 1px solid red;
+    border-radius: 0.5rem;
+}
+
+.card-body {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 1px;
+    align-items: center;
+    /* padding-left: 28px !important; */
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.75em + 0.875rem + 2px);
+    padding: 0.4375rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #0d161b;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #d5d7d9;
+    border-radius: 0.5rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+button, input {
+    overflow: visible;
+}
