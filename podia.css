@@ -128,6 +128,11 @@ a {
   padding: 7.905px 23.364px 7.905px 23.364px;
 }
 
+.signupFree a {
+  text-decoration: none;
+  color: white;
+}
+
 .signupFree:hover {
   background-color: #351e7a;
 }

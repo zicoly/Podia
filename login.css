@@ -165,10 +165,13 @@ a {
 }
 
 .mx-auto {
-  /* border: 1px solid red; */
-  padding-top: 180px;
+  padding-top: 150px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.white-space {
+  padding-top: 50px;
 }
 
 div {
@@ -269,6 +272,17 @@ button {
 
 .text-muted {
   color: #53595c;
+}
+
+small {
+  font-weight: 400;
+}
+
+.form-text {
+  font-size: 0.875rem;
+  line-height: 1.7142857143;
+  display: block;
+  margin-top: 0.25rem;
 }
 
 u {

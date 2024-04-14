@@ -37,7 +37,7 @@
 
                 <nav class="main-nav-links d-flex">
                     <div class="btn-row">
-                        <a href="#" class="btn">Sign up</a>
+                        <a href="signup.html" class="btn">Sign up</a>
                         <a href="login.html" class="btn">Log in</a>
                     </div>
                 </nav>
@@ -52,16 +52,16 @@
                     <div class="card-body">
                         <div style="width: 480px;" class="mx-auto">
                             <h1 class="text-center">Log in to Podia</h1>
-                            <form role="form">
+                            <form role="form" id="form">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" placeholder="e.g. picard@starfleet.org" class="form-control"
-                                        id="email" required>
+                                    <input required="required" type="email" placeholder="e.g. picard@starfleet.org" class="form-control"
+                                        id="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" placeholder="• • • • • • • •" class="form-control"
-                                        id="password" required>
+                                    <input required="required" type="password" placeholder="• • • • • • • •" class="form-control"
+                                        id="password">
                                 </div>
                                 <button type="submit" block="true" class="btn-block" id="loginBtn">
                                     <span>Login</span>
