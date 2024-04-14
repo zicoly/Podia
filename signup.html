@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podia: Login</title>
+    <title>Podia: Signup</title>
     <link rel="stylesheet" href="login.css">
 </head>
 
@@ -37,7 +37,7 @@
 
                 <nav class="main-nav-links d-flex">
                     <div class="btn-row">
-                        <a href="signup.html" class="btn">Sign up</a>
+                        <a href="#" class="btn">Sign up</a>
                         <a href="login.html" class="btn">Log in</a>
                     </div>
                 </nav>
@@ -50,28 +50,35 @@
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-body">
-                        <div style="width: 480px;" class="mx-auto">
-                            <h1 class="text-center">Log in to Podia</h1>
-                            <form role="form" id="form">
+                        <div style="width: 480px;" class="mx-auto white-space">
+                            <h1 class="text-center">Sign up for Podia</h1>
+                            <p class="text-lg text-center text-muted">join for free forever. Upgrade anytime!</p>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="name" placeholder="e.g. Jean-Luc Picard" class="form-control" id="name"
+                                        required>
+                                </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input required="required" type="email" placeholder="e.g. picard@starfleet.org" class="form-control"
-                                        id="email">
+                                    <input type="email" placeholder="e.g. picard@starfleet.org" class="form-control"
+                                        id="email" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input required="required" type="password" placeholder="• • • • • • • •" class="form-control"
-                                        id="password">
+                                    <input type="password" placeholder="• • • • • • • •" class="form-control"
+                                        id="password" required>
+                                    <small class="form-text text-muted">Minimum 6 characters.</small>
                                 </div>
-                                <button type="submit" block="true" class="btn-block" id="loginBtn">
-                                    <span>Login</span>
+                                <button type="submit" block="true" class="btn-block" id="signupBtn">
+                                    <span>Get started</span>
                                 </button>
                             </form>
                             <div class="text-center">
                                 <span class="text-muted">
-                                    Forgot your password?
+                                    Already have an account?
                                     <u>
-                                        <a href="reset.html" class="text-muted">Reset it</a>
+                                        <a href="login.html" class="text-muted">Log in</a>
                                     </u>
                                 </span>
                             </div>
@@ -81,8 +88,37 @@
             </div>
         </section>
     </main>
+    <script>
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const signupBtn = document.getElementById('signupBtn');
 
-    <script src="login.js"></script>
+        nameInput.addEventListener('input', toggleButtonOpacity);
+        emailInput.addEventListener('input', toggleButtonOpacity);
+        passwordInput.addEventListener('input', function () {
+            toggleButtonOpacity();
+            validatePasswordLength();
+        });
+
+        function toggleButtonOpacity() {
+
+            if (nameInput.value.trim() !== "" && emailInput.value.trim() !== "" && passwordInput.value.length >= 6) {
+                signupBtn.style.opacity = 1;
+            } else {
+                signupBtn.style.opacity = 0.4;
+            }
+        }
+
+        function validatePasswordLength() {
+            const passwordLength = passwordInput.value.length;
+            if (passwordLength < 6) {
+                passwordInput.setCustomValidity("Please lengthen this text to 6 characters or more (you are currently using " + passwordLength + " character" + (passwordLength === 1 ? "" : "s") + ")");
+            } else {
+                passwordInput.setCustomValidity("");
+            }
+        }
+    </script>
 </body>
 
 </html>

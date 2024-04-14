@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podia: Login</title>
+    <title>Podia: Reset paassword</title>
     <link rel="stylesheet" href="login.css">
 </head>
 
@@ -51,27 +51,23 @@
                 <div class="card">
                     <div class="card-body">
                         <div style="width: 480px;" class="mx-auto">
-                            <h1 class="text-center">Log in to Podia</h1>
-                            <form role="form" id="form">
+                            <h1 class="text-center">Reset password</h1>
+                            <p class="text-lg text-center text-muted">We'll send you password reset instructions.</p>
+                            <form role="form">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input required="required" type="email" placeholder="e.g. picard@starfleet.org" class="form-control"
-                                        id="email">
+                                    <input type="email" placeholder="e.g. picard@starfleet.org" class="form-control"
+                                        id="email" required>
                                 </div>
-                                <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <input required="required" type="password" placeholder="• • • • • • • •" class="form-control"
-                                        id="password">
-                                </div>
-                                <button type="submit" block="true" class="btn-block" id="loginBtn">
-                                    <span>Login</span>
+                                <button type="submit" block="true" class="btn-block" id="resetBtn">
+                                    <span>Send reset email</span>
                                 </button>
                             </form>
                             <div class="text-center">
                                 <span class="text-muted">
-                                    Forgot your password?
+                                    Remember your password?
                                     <u>
-                                        <a href="reset.html" class="text-muted">Reset it</a>
+                                        <a href="login.html" class="text-muted">Log in</a>
                                     </u>
                                 </span>
                             </div>
@@ -82,7 +78,30 @@
         </section>
     </main>
 
-    <script src="login.js"></script>
+    <script>
+        const emailInput = document.getElementById('email');
+        const resetBtn = document.getElementById('resetBtn');
+
+        emailInput.addEventListener('input', toggleOpacity);
+
+        function validateEmail(email) {
+            // expression for email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function toggleOpacity() {
+            const email = emailInput.value.trim();
+            const isValidEmail = validateEmail(email);
+
+            if (isValidEmail) {
+                resetBtn.style.opacity = 1;
+            } else {
+                resetBtn.style.opacity = 0.4;
+            }
+        }
+    </script>
+
 </body>
 
 </html>

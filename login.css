@@ -1,84 +1,290 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.75;
-    text-align: left;
-    background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  text-align: left;
+  background-color: #fff;
 }
 
 header {
-    border: 1px solid red;
-    display: flex;
-    align-items: center;
+  height: 30px;
+  display: block;
+  align-items: center;
 }
 
-.right-nav ul{
-    display: flex;
+.main-nav {
+  box-shadow: 0 1px rgba(13, 22, 27, 0.18);
+  padding-bottom: 12px;
+  padding-top: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background-color: #fff;
+}
+
+.container-header-fluid {
+  max-width: 1440px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-header-fluid {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.align-items-center {
+  align-items: center;
+  display: flex;
+}
+
+.main-nav-logo {
+  flex-grow: 3;
+  flex-shrink: 1;
+  flex-basis: 0%;
 }
 
 .main-nav-logo svg {
-    height: 24px;
-    width: auto;
+  height: 24px;
+  width: auto;
+}
+
+.svg-primary {
+  fill: #4b2aad;
 }
 
 svg {
-    overflow: hidden;
-    vertical-align: middle;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.d-flex {
+  display: flex;
+}
+
+a {
+  color: #4b2aad;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.main-nav-links {
+  flex-grow: 9;
+  justify-content: flex-end;
+}
+
+.main-nav-logo,
+.main-nav-links {
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+.btn-row {
+  justify-content: flex-start;
+  gap: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.375rem 0.875rem;
+  font-size: 0.875rem;
+  line-height: 1.7142857143;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: #53595c;
+  background-color: transparent;
+  border-color: #edeff0;
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 0 solid transparent;
+  transition: background-color 0.1s;
+}
+
+.btn:hover {
+  background-color: #edeff0;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(92vh - 62px);
+  max-width: 1440px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .container-fluid {
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container-fluid {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 }
 
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid #d5d7d9;
-    border: 1px solid red;
-    border-radius: 0.5rem;
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #d5d7d9;
+  border-radius: 0.5rem;
 }
 
 .card-body {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    min-height: 1px;
-    align-items: center;
-    /* padding-left: 28px !important; */
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 1px;
+  align-items: center;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 
 .mx-auto {
-    margin-left: auto;
-    margin-right: auto;
+  padding-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.white-space {
+  padding-top: 50px;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
 }
 
 form {
-    display: block;
-    margin-top: 0em;
-    unicode-bidi: isolate;
+  display: block;
+  margin-top: 0em;
+  unicode-bidi: isolate;
+}
+
+label {
+  line-height: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  display: inline-block;
+  cursor: default;
+}
+
+.form-group {
+  margin-bottom: 1rem;
 }
 
 .form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.75em + 0.875rem + 2px);
-    padding: 0.4375rem 1rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.75;
-    color: #0d161b;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #d5d7d9;
-    border-radius: 0.5rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  width: 93%;
+  height: auto;
+  padding: 0.4375rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #0d161b;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #d5d7d9;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
 }
 
-button, input {
-    overflow: visible;
+.form-control:focus {
+  border-color: #4b2aad;
+  box-shadow: 0 0 0 3px rgba(183, 170, 222, 0.5);
+}
+
+button,
+input {
+  overflow: visible;
+  margin: 0;
+  font-family: inherit;
+}
+
+button {
+  vertical-align: middle;
+  text-transform: none;
+  padding-inline: 6px;
+  padding-block: 1px;
+  text-shadow: none;
+  text-indent: 0px;
+  word-spacing: normal;
+  letter-spacing: normal;
+  text-rendering: auto;
+}
+
+.btn-block {
+  color: #fff;
+  background-color: #4b2aad;
+  border-color: #4b2aad;
+  opacity: 0.4;
+  cursor: pointer;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  display: block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  border: 0 solid transparent;
+  padding: 8px 18px;
+  font-size: 1rem;
+  line-height: 1.75;
+  border-radius: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.7777777778;
+  margin-bottom: 16px;
+}
+
+.text-muted {
+  color: #53595c;
+}
+
+small {
+  font-weight: 400;
+}
+
+.form-text {
+  font-size: 0.875rem;
+  line-height: 1.7142857143;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+u {
+  text-decoration: underline;
 }
