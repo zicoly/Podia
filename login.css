@@ -288,3 +288,39 @@ small {
 u {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  
+  main {
+    overflow: hidden;
+  }
+
+  .main-nav .main-nav-logo {
+    margin-left: 20px;
+  }
+
+
+  .form-group input,
+  .btn-block {
+    width: 70%;
+  }
+
+  .text-center {
+    align-items: center;
+    width: 350px;
+  }
+
+  .card {
+    margin-top: 30px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+}
